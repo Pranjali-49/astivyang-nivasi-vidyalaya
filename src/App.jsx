@@ -62,13 +62,19 @@ export default function SchoolWebsite() {
           }}
         >
           <h1 style={{ fontSize: "44px", marginBottom: "16px" }}>
-            Astivyang Nivasi Vidyalaya
+            Asthivyang Nivasi Vidyalaya
           </h1>
+          <h1 style={{ fontSize: "44px", marginBottom: "16px" }}>
+            Mukbadhir Nivasi Vidyalaya
+          </h1>
+          <p style={{ fontSize: "20px", marginBottom: "20px" }}>
+            Mul, Dist. Chandrapur
+          </p>
           <p style={{ fontSize: "20px", marginBottom: "20px" }}>
             Empowering Abilities • Nurturing Confidence • Building Independent Futures
           </p>
           <p style={{ fontSize: "16px", lineHeight: "1.7" }}>
-            Astivyang Nivasi Vidyalaya is a dedicated educational institution for children with special needs, providing a safe, inclusive, and supportive environment for learning and growth.
+            Astivyang Nivasi Vidyalaya and Mukbadhir Nivasi Vidyalaya is a dedicated educational institution for children with special needs, providing a safe, inclusive, and supportive environment for learning and growth.
           </p>
         </div>
       </section>
@@ -82,7 +88,7 @@ export default function SchoolWebsite() {
           About the School
         </h2>
         <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "900px", color: "#374151" }}>
-          Astivyang Nivasi Vidyalaya is a special school committed to the education, rehabilitation, 
+          Astivyang Nivasi Vidyalaya and Mukbadhir Nivasi Vidyalaya is a special school committed to the education, rehabilitation, 
           and overall development of children with disabilities. The school provides structured academic 
           learning from 1st to 7th standard, along with rehabilitation support and life-skills training 
           that encourages independence, confidence, and self-reliance.        
@@ -100,7 +106,7 @@ export default function SchoolWebsite() {
         "linear-gradient(135deg, #f1f5f9, #ffffff)"
       )}>
       <div style={sectionCard}>
-        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>School Committee and Staff</h2>
+        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>School Founding Committee</h2>
         <div
           style={{
             display: "grid",
@@ -117,7 +123,51 @@ export default function SchoolWebsite() {
             name: "Shri. Namdev Lengure",
             role: "President",
             note: "Administrative oversight and policy direction",
-          },
+          }].map((person, i) => (
+            <div key={i} style={cardStyle}>
+              <h3 style={{ textAlign: "center", marginBottom: "8px" }}>
+                {person.name}
+              </h3>
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#4f46e5",
+                  fontWeight: "600",
+                  marginBottom: "10px",
+                }}
+              >
+                {person.role}
+              </p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "14px",
+                  color: "#6b7280",
+                  lineHeight: "1.6",
+                }}
+              >
+                {person.note}
+              </p>
+            </div>
+          ))}
+        </div>
+        </div>
+        </section>
+
+       {/* STAFF */}
+      <section style={sectionWrapper(
+        "linear-gradient(135deg, #f1f5f9, #ffffff)"
+      )}>   
+      <div style={sectionCard}>
+        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>Asthivyang Nivasi Vidyalaya Staff</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "24px",
+          }}
+        >
+          {[
           {
             name: "Shri. Kacharu Durge",
             role: "Headmaster",
@@ -166,8 +216,72 @@ export default function SchoolWebsite() {
           ))}
         </div>
         </div>
-      </section>
+        </section>
 
+       {/* STAFF */}
+      <section style={sectionWrapper(
+        "linear-gradient(135deg, #f1f5f9, #ffffff)"
+      )}>
+      <div style={sectionCard}>
+        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>Mukbadhir Nivasi Vidyalaya Staff</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "24px",
+          }}
+        >
+          {[
+          {
+            name: "Shri. Pramod Mahadore",
+            role: "Headmaster",
+            note: "Academic leadership and student welfare",
+          },
+          {
+            name: "Shri. Homraj Satpute",
+            role: "Special Teacher",
+            note: "Inclusive classroom support",
+          },
+          {
+            name: "Smt. Pradnya Narnavre",
+            role: "Special Teacher",
+            note: "Inclusive classroom support",
+          },
+          {
+            name: "Shri. Raju Wankhede",
+            role: "Clerk",
+            note: "Efficient record management",
+          }].map((person, i) => (
+            <div key={i} style={cardStyle}>
+              <h3 style={{ textAlign: "center", marginBottom: "8px" }}>
+                {person.name}
+              </h3>
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#4f46e5",
+                  fontWeight: "600",
+                  marginBottom: "10px",
+                }}
+              >
+                {person.role}
+              </p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "14px",
+                  color: "#6b7280",
+                  lineHeight: "1.6",
+                }}
+              >
+                {person.note}
+              </p>
+            </div>
+          ))}
+        </div>
+        </div>
+      </section>
+      
       {/* ACADEMIC PROGRAM */}
       <section style={sectionWrapper(
         "linear-gradient(135deg, #ecfeff, #f0fdf4)"
@@ -243,7 +357,7 @@ export default function SchoolWebsite() {
       <div style={sectionCard}>
         <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>Festivals & Celebrations</h2>
         <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "900px" }}>
-          Astivyang Nivasi Vidyalaya celebrates cultural and national festivals such as Raksha Bandhan, Independence Day, and Republic Day to promote joy, unity, and cultural awareness among students.        </p>
+          Astivyang Nivasi Vidyalaya and Mukbadhir Nivasi Vidyalaya celebrates cultural and national festivals such as Raksha Bandhan, Independence Day, and Republic Day to promote joy, unity, and cultural awareness among students.        </p>
         <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "900px" }}>
           A special focus is given to Divyang Divas (3rd December), celebrated at the district level with other special schools. The day includes cultural programs and sports activities, where students actively participate and receive prizes and awards for their achievements.        </p>
         <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "900px" }}>
